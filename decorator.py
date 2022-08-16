@@ -6,6 +6,7 @@ import traceback
 import ssl
 from pprint import pformat
 
+# https://hello-bryan.tistory.com/315
 ssl._create_default_https_context = ssl._create_unverified_context
 
 CONFIG_PATH = "config.json"

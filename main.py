@@ -1,4 +1,4 @@
-from object import Logging
+from decorator import Logging
 
 
 @Logging(description="더하기 10을 하는 함수", level="INFO", error_comment="인수 number는 10을 더할 수 있는 숫자여야만 합니다.")
