@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "disable_existing_loggers": false,
+    "formatters": {
+        "basic": {
+            "format": "%(asctime)s [%(levelname)s] %(message)s",
+            "datefmt": "%H:%M:%S"
+        }
+    },
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+            "level": "INFO",
+            "formatter": "basic"
+        },
+        "slack": {
+            "class": "handler.SlackAlertHandler",
+            "level": "INFO",
+            "formatter": "basic",
+            "token": "복사한 토큰을 이곳에 붙여넣기",
+            "channel": "#alert",
+            "prefix": "local"
+        }
+    },
+    "loggers": {
+        "basic": {
+            "level": "DEBUG",
+            "handlers": [
+                "console",
+                "slack"
+            ],
+            "propagate": true
+        }
+    }
+}
